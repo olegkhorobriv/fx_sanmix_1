@@ -26,7 +26,7 @@ import { DatePipe } from '@angular/common';
 @Component({
   selector: 'app-layout',
   templateUrl: './layout.component.html',
-  styleUrls: ['./layout.component.css'],
+  styleUrls: ['./layout.component.scss'],
   providers: [DatePipe]
 })
 export class LayoutComponent {
@@ -45,5 +45,4 @@ export class LayoutComponent {
   getCurrentDate(): Date {
     return new Date();
   }
-
 }
