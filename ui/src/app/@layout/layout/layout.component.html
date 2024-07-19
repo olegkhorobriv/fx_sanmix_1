@@ -1,0 +1,29 @@
+<!-- layout.component.html -->
+<mat-toolbar color="primary">
+  <span>Admin Dashboard</span>
+  <a style="color: white; margin-left: auto;" [routerLink]="['/auth/logout']" class="menu-item">Вийти</a>
+</mat-toolbar>
+
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav mode="side" opened>
+    <mat-nav-list>
+      <!-- Створюємо посилання для навігації з використанням routerLink -->
+      <mat-list-item *ngFor="let item of navItems" [routerLink]="item.link">
+        <span mat-line>{{ item.label }}</span>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <div class="main-content">
+      <h1>Welcome, Admin!</h1>
+      <p>Дата: {{ getCurrentDate() | date: 'yyyy-MM-dd' }}</p>
+      <!-- Вміст основної сторінки змінюється залежно від маршруту -->
+      <router-outlet></router-outlet>
+    </div>
+    <footer class="footer">
+      &copy; Всі права захищено 2024
+    </footer>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+ 

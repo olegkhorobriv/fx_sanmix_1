@@ -1,0 +1,21 @@
+
+
+.main-content {
+  padding: 20px;
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.stat-card {
+  flex: 1 1 calc(50% - 20px);
+  min-width: 200px;
+}
+
+.orders-card, .tasks-card {
+  margin-bottom: 20px;
+}

@@ -1,0 +1,41 @@
+
+
+<mat-sidenav-container class="sidenav-container">
+
+
+  <mat-sidenav-content>
+    <div class="main-content">
+      <div class="stats">
+        <mat-card class="stat-card" *ngFor="let stat of stats">
+          <mat-card-title>{{ stat.title }}</mat-card-title>
+          <mat-card-content>{{ stat.value }}</mat-card-content>
+        </mat-card>
+      </div>
+
+      <mat-card class="orders-card">
+        <mat-card-title>Останні замовлення</mat-card-title>
+        <mat-card-content>
+          <mat-list>
+            <mat-list-item *ngFor="let order of orders">
+              {{ order }}
+            </mat-list-item>
+          </mat-list>
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card class="tasks-card">
+        <mat-card-title>Сповіщення та завдання</mat-card-title>
+        <mat-card-content>
+          <mat-list>
+            <mat-list-item *ngFor="let task of tasks">
+              {{ task }}
+            </mat-list-item>
+          </mat-list>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+

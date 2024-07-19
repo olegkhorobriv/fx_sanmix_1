@@ -1,0 +1,13 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "./ui/src/assets/styles/colors";
+
+body {
+  margin: 0!important;
+  font-family: "Arial", serif;
+  // background-color: rgba(200, 237, 255, 0.35);
+  background-image: url("assets/bg.png");
+  background-size: cover;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -1,0 +1,19 @@
+<!-- src/app/components/file-upload/file-upload.component.html -->
+<mat-toolbar color="primary">
+  <span>File Upload</span>
+</mat-toolbar>
+
+<div class="upload-container">
+  <input type="file" (change)="selectFile($event)" />
+  <button mat-raised-button color="primary" (click)="upload()">Upload</button>
+  <p>{{ message }}</p>
+
+  <h3>Files</h3>
+  <ul>
+    <li *ngFor="let file of fileInfos">
+      {{ file.name }}
+      <button mat-button (click)="downloadFile(file.name)">Download</button>
+      <button mat-button (click)="deleteFile(file.name)">Delete</button>
+    </li>
+  </ul>
+</div>
